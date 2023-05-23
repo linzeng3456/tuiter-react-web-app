@@ -1,0 +1,159 @@
+.wd-full-width-table {
+    width: 100%;
+}
+
+.wd-navigation-part {
+    width: 10%;
+}
+
+.wd-body-part {
+    width: 90%;
+}
+
+.wd-search-container {
+    clear: both;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.wd-search-box {
+    width: 90%;
+    float: left;
+    border-radius: 50px;
+    border: none;
+    background-color: lightgray;
+}
+
+.wd-gear-box {
+    width: 10%;
+    float: right;
+}
+
+.wd-search-icon {
+    margin: 5px 10px 5px 10px;
+    background-color: lightgray;
+    font-size: 16px;
+}
+
+.wd-search-input {
+    margin: 5px 5px 5px 5px;
+    width: 90%;
+    background-color: lightgray;
+    color: darkgray;
+    border: none;
+}
+
+.wd-gear-icon {
+    margin: 5px 30px 5px 20px;
+    float: right;
+}
+
+.wd-grid-row {
+    clear: both;
+}
+
+.wd-tabs {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.wd-tab-item {
+    width: 20%;
+    margin-right: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.wd-tab-text {
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.wd-tab-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: blue;
+}
+
+.wd-active .wd-tab-underline {
+    background-color: blue;
+}
+
+.wd-tab-item:not(.active) .wd-tab-underline {
+    display: none;
+}
+
+
+
+.wd-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.wd-image-text {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.wd-tweet-list {
+    margin-top: 20px;
+}
+
+.wd-tweet-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.wd-tweet-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.wd-tweet-content {
+    float: left;
+    flex: 1;
+}
+
+.wd-tweet-title {
+    font-weight: bold;
+}
+
+.wd-tweet-label {
+    font-size: 12px;
+    color: gray;
+}
+
+.wd-tweet-text {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.wd-tweet-ellipsis {
+    float: right;
+    top: 5px;
+    right: 50px;
+    color: gray;
+    font-size: 25px;
+}
+
+
+.wd-btn-width {
+    width: 100%;
+}
