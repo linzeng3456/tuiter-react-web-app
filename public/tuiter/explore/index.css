@@ -58,6 +58,7 @@
     display: flex;
     justify-content: flex-start;
     padding: 0;
+    align-items: center;
 }
 
 .wd-tab-item {
@@ -76,9 +77,10 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: blue;
+    width: 30%;
+
 }
 
 .wd-active .wd-tab-underline {
@@ -108,6 +110,8 @@
 
 .wd-tweet-list {
     margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
 }
 
 .wd-tweet-item {
@@ -115,9 +119,10 @@
     align-items: flex-start;
     margin-bottom: 10px;
     padding: 0px;
-    margin: 0px;
-    list-style-type: none;
+    margin-top: 10px;
+
 }
+
 
 .wd-tweet-item img {
     width: 40px;
@@ -156,4 +161,35 @@
 
 .wd-btn-width {
     width: 100%;
+}
+
+
+
+
+.trending-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.trending-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.trending-category {
+    color: gray;
+}
+
+.trending-topic {
+    display: flex;
+    align-items: center;
+}
+
+.trending-name {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.trending-count {
+    color: gray;
 }
