@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 const NavigationSidebar = () => {
   const { pathname } = useLocation();
-  const [ignore, tuiter, active] = pathname.split("/");
+  const [, , active] = pathname.split("/");
   return (
       <div className="list-group">
         <Link to={"/tuiter/home "} className={`list-group-item
