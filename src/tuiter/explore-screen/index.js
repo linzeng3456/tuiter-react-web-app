@@ -28,6 +28,12 @@ function ExploreScreen() {
           <li className="nav-item">
             <a className="nav-link" href={"/"}>News</a>
           </li>
+          <li className="nav-item">
+            <a className="nav-link" href={"/"}>Sports</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href={"/"}>Entertainment</a>
+          </li>
         </ul>
         <div className="position-relative mb-2">
 
