@@ -20,7 +20,7 @@ const WhatsHappening = () => {
   return (
     <div className="row">
       <div className="col-auto">
-        <img src={require(`./images/nasa.png`)} width={60}/>
+        <img src={require(`./images/nasa.png`)} width={60} alt={""}/>
       </div>
       <div className="col-10">
         <textarea value={whatsHappening} placeholder="What's happening?"
