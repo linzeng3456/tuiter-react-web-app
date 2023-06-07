@@ -33,12 +33,11 @@ const WhatsHappening = () => {
             Tuit
           </button>
           <div className="text-primary fs-2">
-            <AiOutlinePicture className="me-3"/>
-            <MdFormatListBulleted className="me-3"/>
-            <BsEmojiSmile className="me-3"/>
-            <HiOutlineLocationMarker className="me-3"/>
-            <BiBold className="me-3"/>
-            <BiItalic className="me-3"/>
+            <i className="bi bi-image me-3"></i>
+            <i className="bi bi-filetype-gif me-3"></i>
+            <i className="bi bi-reception-4 me-3"></i>
+            <i className="bi bi-emoji-smile me-3"></i>
+            <i className="bi bi-geo-alt me-3"></i>
           </div>
         </div>
       </div>

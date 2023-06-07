@@ -37,7 +37,7 @@ const TuitItem = (
               <i className="bi bi-x-lg float-end"
                  onClick={() => deleteTuitHandler(tuit._id)}></i>
               <span className="fw-bolder">{tuit.topic} </span>
-              <i className="bi bi-check-circle" style={{ color: "blue" }}></i>
+              <i className="bi bi-check-circle-fill text-primary"></i>
               <span> @{tuit.userName} . {tuit.time}</span>
             </div>
             <div>{tuit.tuit}</div>

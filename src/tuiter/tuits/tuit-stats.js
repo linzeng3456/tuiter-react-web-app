@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const TuitStats = ({ replies, retuits, likes }) => {
-  const [isLiked, setIsLiked] = useState(false);
+  const [isLiked, setIsLiked] = useState(true);
   const [likesCount, setLikesCount] = useState(likes);
 
   const handleLike = () => {
