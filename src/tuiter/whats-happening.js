@@ -1,9 +1,4 @@
 import React, {useState} from "react";
-import { AiOutlinePicture } from 'react-icons/ai';
-import { HiOutlineLocationMarker } from 'react-icons/hi';
-import { MdFormatListBulleted } from 'react-icons/md';
-import { BsEmojiSmile } from 'react-icons/bs';
-import { BiBold, BiItalic } from 'react-icons/bi';
 import {createTuit} from "./tuits/tuits-reducer";
 import {useDispatch} from "react-redux";
 
