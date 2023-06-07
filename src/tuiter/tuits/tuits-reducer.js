@@ -14,7 +14,7 @@ const templateTuit = {
   "liked": false,
   "replies": 0,
   "retuits": 0,
-  "likes": 0,
+  "likes": 1,
 }
 
 const tuitsSlice = createSlice({
