@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { updateTuitThunk } from "../services/tuits-thunks";
+import { useDispatch } from "react-redux";
 
-const TuitStats = ({ replies, retuits, likes }) => {
+// const TuitStats = ({ replies, retuits, likes }) => {
+const TuitStats = ({ tuit }) => {
   const [isLiked, setIsLiked] = useState(true);
-  const [likesCount, setLikesCount] = useState(likes);
+  // const [likesCount, setLikesCount] = useState(tuit.likes);
+  const dispatch = useDispatch();
 
   const handleLike = () => {
     if (isLiked) {
-      setLikesCount(likesCount - 1);
+      // setLikesCount(likesCount - 1);
+      dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes - 1 }));
     } else {
-      setLikesCount(likesCount + 1);
+      // setLikesCount(likesCount + 1);
+      dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes + 1 }));
     }
     setIsLiked(!isLiked);
   };
@@ -19,13 +25,13 @@ const TuitStats = ({ replies, retuits, likes }) => {
             <span className="mr-1">
               <i className="bi bi-chat-left"></i>
             </span>
-            <span> {replies}</span>
+            <span> {tuit.replies}</span>
           </div>
           <div className="col-3">
             <span className="mr-1">
               <i className="bi bi-arrow-repeat"></i>
             </span>
-            <span> {retuits}</span>
+            <span> {tuit.retuits}</span>
           </div>
           <div className="col-3">
             <span
@@ -35,7 +41,9 @@ const TuitStats = ({ replies, retuits, likes }) => {
             >
               <i className={isLiked ? 'bi bi-heart-fill' : 'bi bi-heart'}></i>
             </span>
-            <span> {likesCount}</span>
+            {/*<span> {likesCount}</span>*/}
+            <span> {tuit.likes}</span>
+
           </div>
           <div className="col-3">
             <span className="mr-1">

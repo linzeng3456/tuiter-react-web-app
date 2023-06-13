@@ -1,6 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 const NavigationSidebar = () => {
+  const { currentUser } = useSelector((state) => state.user);
   const { pathname } = useLocation();
   const [, , active] = pathname.split("/");
   return (
@@ -22,6 +24,9 @@ const NavigationSidebar = () => {
                 ${active === "profile" ? "active" : ""}`}>Profile</Link>
         <Link to={"/tuiter/more "} className={`list-group-item
                 ${active === "more" ? "active" : ""}`}>More</Link>
+        {!currentUser && <Link className="list-group" to="/tuiter/login">   Login   </Link>}
+        {!currentUser && <Link className="list-group" to="/tuiter/register">Register</Link>}
+        { currentUser && <Link className="list-group" to="/tuiter/profile"> Profile </Link>}
       </div>
   );
 };
