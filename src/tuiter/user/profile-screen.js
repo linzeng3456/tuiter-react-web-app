@@ -15,7 +15,7 @@ function ProfileScreen() {
       setProfile(payload);
     };
     loadProfile();
-  }, []);
+  }, [dispatch]);
   return (
       <div>
         <h1>Profile Screen</h1>
