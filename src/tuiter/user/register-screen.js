@@ -14,7 +14,7 @@ function RegisterScreen() {
       await dispatch(registerThunk({username, password, _id}));
       setUsername("");
       setPassword("");
-      navigate("/tuiter/login");
+      navigate("/tuiter/profile");
 
     } catch (e) {
       setUsername("");
