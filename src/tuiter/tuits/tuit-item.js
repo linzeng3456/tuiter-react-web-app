@@ -28,6 +28,8 @@ const TuitItem = (
     // dispatch(deleteTuit(id));
     dispatch(deleteTuitThunk(id));
   }
+  console.log("------TuitItem------");
+  console.log(tuit);
   return(
       <li className="list-group-item">
         <div className="row">
