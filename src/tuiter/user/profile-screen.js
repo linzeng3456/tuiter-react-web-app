@@ -5,6 +5,12 @@ import { profileThunk, logoutThunk, updateUserThunk }
   from "../services/auth-thunks";
 function ProfileScreen() {
   const { currentUser } = useSelector((state) => {
+    console.log("------state.user ------")
+    console.log(state.user)
+    if (!state.user) {
+      console.trace()
+    }
+    console.trace()
     return state.user
   });
   console.log("------profile currentUser------")
@@ -16,20 +22,20 @@ function ProfileScreen() {
   const navigate = useNavigate();
   const save = async () => { await dispatch(updateUserThunk(profile)); };
 
-  useEffect( () => {
-    const fetchProfile = async () => {
-      try {
-        const { payload } = await dispatch(profileThunk());
-        console.log("+++++++useEffect profile++++++++")
-        console.log(payload)
-        setProfile(payload);
-      } catch (error) {
-        console.error(error);
-        navigate("/tuiter/login");
-      }
-    }
-    fetchProfile();
-  }, [dispatch,navigate]);
+  // useEffect( () => {
+  //   const fetchProfile = async () => {
+  //     try {
+  //       const { payload } = await dispatch(profileThunk());
+  //       console.log("+++++++useEffect profile++++++++")
+  //       console.log(payload)
+  //       setProfile(payload);
+  //     } catch (error) {
+  //       console.error(error);
+  //       navigate("/tuiter/login");
+  //     }
+  //   }
+  //   fetchProfile();
+  // }, [dispatch,navigate]);
   return (
       <div>
         <h1>Profile Screen</h1>

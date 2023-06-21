@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 import { loginThunk } from "../services/auth-thunks";
 function LoginScreen() {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState({});
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleLogin = async () => {
