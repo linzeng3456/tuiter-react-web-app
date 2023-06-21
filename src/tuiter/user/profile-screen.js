@@ -4,18 +4,32 @@ import { useNavigate } from "react-router";
 import { profileThunk, logoutThunk, updateUserThunk }
   from "../services/auth-thunks";
 function ProfileScreen() {
-  const { currentUser } = useSelector((state) => state.user);
+  const { currentUser } = useSelector((state) => {
+    return state.user
+  });
+  console.log("------profile currentUser------")
+  console.log(currentUser)
   const [ profile, setProfile ] = useState(currentUser);
+  console.log("+++++++profile++++++++")
+  console.log(profile)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const save = async () => { await dispatch(updateUserThunk(profile)); };
+
   useEffect( () => {
-    const loadProfile = async () => {
-      const { payload } = await dispatch(profileThunk());
-      setProfile(payload);
-    };
-    loadProfile();
-  }, [dispatch]);
+    const fetchProfile = async () => {
+      try {
+        const { payload } = await dispatch(profileThunk());
+        console.log("+++++++useEffect profile++++++++")
+        console.log(payload)
+        setProfile(payload);
+      } catch (error) {
+        console.error(error);
+        navigate("/tuiter/login");
+      }
+    }
+    fetchProfile();
+  }, [dispatch,navigate]);
   return (
       <div>
         <h1>Profile Screen</h1>

@@ -1,16 +1,19 @@
 import axios from "axios";
 const SERVER_API_URL = process.env.REACT_APP_SERVER_API_URL;
 const USERS_URL = `${SERVER_API_URL}/users`;
+console.log("+++++USERS_URL++++")
+console.log(USERS_URL)
 
 const api = axios.create({ withCredentials: true });
 
-export const login = async ({ username, password }) => {
-  const response = await api.post(`${USERS_URL}/login`, { username, password });
-  const user = response.data;
-  return user;
+export const login = async (user) => {
+  const response = await api.post(`${USERS_URL}/login`, user);
+  return response.data;
 };
-export const register = async ({username, password, _id}) => {
-  const response = await api.post(`${USERS_URL}/register`, { username, password, _id});
+export const register = async (user) => {
+  const response = await api.post(`${USERS_URL}/register`, user);
+  console.log("--------------register----------")
+  console.log(response.data)
   return response.data;
 }
 export const logout = async () => {

@@ -12,6 +12,7 @@ const TuitStats = ({ tuit }) => {
   const handleLike = () => {
     if (isLiked) {
       // setLikesCount(likesCount - 1);
+      console.log("-----handleLike-----")
       dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes - 1 }));
     } else {
       // setLikesCount(likesCount + 1);

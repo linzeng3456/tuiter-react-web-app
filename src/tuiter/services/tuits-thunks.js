@@ -15,6 +15,8 @@ export const createTuitThunk = createAsyncThunk(
     'tuits/createTuit',
     async (tuit) => {
       const newTuits = await service.createTuit(tuit)
+      console.log("-----createTuitThuck------")
+      console.log(newTuits)
       return newTuits
     });
 export const updateTuitThunk =
@@ -22,6 +24,9 @@ export const updateTuitThunk =
         'tuits/updateTuit',
         async (tuit) => {
           const updateTuit = await service.updateTuit(tuit)
+          console.log("-----updateTuitThuck-----")
+          console.log(tuit)
+          console.log(updateTuit)
           return updateTuit
         }
     );
