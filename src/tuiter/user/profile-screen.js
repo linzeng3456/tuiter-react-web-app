@@ -1,23 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
-import { profileThunk, logoutThunk, updateUserThunk }
+import { logoutThunk, updateUserThunk }
   from "../services/auth-thunks";
 function ProfileScreen() {
   const { currentUser } = useSelector((state) => {
-    console.log("------state.user ------")
-    console.log(state.user)
-    if (!state.user) {
-      console.trace()
-    }
-    console.trace()
     return state.user
   });
-  console.log("------profile currentUser------")
-  console.log(currentUser)
   const [ profile, setProfile ] = useState(currentUser);
-  console.log("+++++++profile++++++++")
-  console.log(profile)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const save = async () => { await dispatch(updateUserThunk(profile)); };
